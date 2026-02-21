@@ -28,7 +28,7 @@ sudo lvextend -l +100%FREE /dev/ubuntu-vg/ubuntu-lv
 sudo resize2fs /dev/ubuntu-vg/ubuntu-lv
 ```
 
-![LVM expansion](../screenshots/expand-lvm-usage-to-100_.png)
+![LVM expansion](../screenshots/expand-lvm-usage-to-100%.png)
 
 ## Result
 
