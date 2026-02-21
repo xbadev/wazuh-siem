@@ -14,7 +14,7 @@ Manually stopping all services and restarting them **in order** (indexer → man
 
 Two problems:
 
-**1. Startup timeout too short.** The wazuh-indexer (OpenSearch/Java-based) had a `TimeoutStartSec=3min` default. On a 4 GB RAM VM, the indexer's wall clock startup time was pushing right up against that 3-minute limit — some boots it made it, most it didn't.
+**1. Startup timeout too short.** The wazuh-indexer (OpenSearch/Java-based) had a `TimeoutStartSec=3min` default. The indexer's wall clock startup time was pushing right up against that 3-minute limit — some boots it made it, most it didn't.
 
 **2. No service dependencies.** All three Wazuh services (`wazuh-indexer`, `wazuh-manager`, `wazuh-dashboard`) started simultaneously at boot. The manager and dashboard depend on the indexer being ready, but systemd didn't know that — so they'd race to start, compete for resources, and the indexer would lose.
 
