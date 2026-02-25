@@ -7,8 +7,8 @@ Installed Wazuh 4.11.2 (all-in-one) on an Ubuntu Server VM and deployed agents t
 | VM | OS | Role | IP (Host-Only) |
 |---|---|---|---|
 | Ubuntu Wazuh Server | Ubuntu 24.04 LTS | Wazuh Manager + Indexer + Dashboard | 192.168.56.50 |
-| Ubuntu Server | Ubuntu 24.04 LTS | Wazuh Agent (Linux endpoint) | 192.168.56.x |
-| Windows Endpoint | Windows 10 | Wazuh Agent (Windows endpoint) | 192.168.56.x |
+| Ubuntu Server | Ubuntu 24.04 LTS | Wazuh Agent (Linux endpoint) | 192.168.56.20 |
+| Windows Endpoint | Windows 10 | Wazuh Agent (Windows endpoint) | 192.168.56.40 |
 
 All VMs run on **VirtualBox** with two network adapters: **NAT** (internet) + **Host-Only** (internal lab communication).
 
