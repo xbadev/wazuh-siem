@@ -72,7 +72,7 @@ Added the following to `/var/ossec/etc/ossec.conf` on the Wazuh manager:
 
 This tells Wazuh: when brute force is detected, drop the source IP via iptables on the reporting agent for 180 seconds.
 
-![Active response config](screenshots/add-active-response-block-inside-ossec_conf.png)
+![Active response config](screenshots/add-active-response-block-inside-ossec.conf.png)
 
 ### Result
 
