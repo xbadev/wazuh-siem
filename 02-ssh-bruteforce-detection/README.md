@@ -52,7 +52,7 @@ The Events tab shows individual alerts with rule IDs — each failed login gener
 
 Wazuh's MITRE ATT&CK framework view shows all techniques triggered by the attack — Password Guessing (23 hits), SSH (18), Brute Force (6), with Credential Access as the top tactic:
 
-![MITRE ATT&CK](screenshots/mitre-att_ck-framework-tab.png)
+![MITRE ATT&CK](screenshots/mitre-att&ck-framework-tab.png)
 
 ## Active Response — Automated IP Block
 
