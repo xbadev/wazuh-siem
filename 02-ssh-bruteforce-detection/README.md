@@ -92,7 +92,7 @@ The Wazuh dashboard captured the entire sequence: failed login alerts (5760) →
 
 ## Why Wazuh Active Response Over Fail2Ban
 
-Fail2Ban works — it was tested in this lab and successfully [banned the attacker's IP](screenshots/fail2ban-client-status-shows-banned-kali-ip.png) after 6 failed attempts. But it operates locally on each host. In an environment with 10, 50, or 100 servers, each one needs Fail2Ban independently configured and maintained.
+Fail2Ban works — it was tested in this lab with [these rules](screenshots/ubuntu-server-jail.local-rules.png) and successfully [banned the attacker's IP](screenshots/fail2ban-client-status-shows-banned-kali-ip.png) after 6 failed attempts. But it operates locally on each host. In an environment with 10, 50, or 100 servers, each one needs Fail2Ban independently configured and maintained.
 
 Wazuh Active Response is centralized. The manager detects the attack from agent logs and pushes the block command back to the endpoint — or to *all* endpoints. One detection can trigger a response across the entire infrastructure. That's the difference between host-level protection and enterprise-level security orchestration.
 
