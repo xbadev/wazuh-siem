@@ -61,7 +61,7 @@ Expanding a single alert reveals the full Windows Event Log data. The key fields
 
 The framework tab shows `T1110 - Brute Force` (2 hits) and `T1078 - Valid Accounts` (19 hits) directly tied to our attack. Credential Access tactic registered 2 alerts:
 
-![MITRE ATT&CK](screenshots/wazuh-dashboard-mitre-att_ck-framework-tab.png)
+![MITRE ATT&CK](screenshots/wazuh-dashboard-mitre-att&ck-framework-tab.png)
 
 ## Active Response — Cross-Platform Note
 
