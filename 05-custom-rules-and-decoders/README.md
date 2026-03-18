@@ -25,7 +25,7 @@ Custom rules let you build new detection logic on top of existing decoders. Cust
 
 Both custom rules chain off Wazuh's built-in rule **5402** — "Successful sudo to ROOT executed." This rule lives in `0020-syslog_rules.xml` and fires whenever a user successfully runs a command via sudo as root:
 
-![Rule 5402](../screenshots/checking-rule-5402-exists-and-matches.png)
+![Rule 5402](screenshots/checking-rule-5402-exists-and-matches.png)
 
 Rule 5402 is level 3 — it logs the event but doesn't raise an alarm. Our custom rules build on top of it to catch specific high-risk sudo commands and elevate them to actionable alerts.
 
@@ -33,7 +33,7 @@ Rule 5402 is level 3 — it logs the event but doesn't raise an alarm. Our custo
 
 Created two custom rules in `/var/ossec/etc/rules/local_rules.xml` on the Wazuh server. Custom rule IDs start at 100000 to avoid conflicts with built-in rules:
 
-![local_rules.xml](../screenshots/local_rules.xml.png)
+![local_rules.xml](screenshots/local_rules.xml.png)
 
 **Rule 100010** (level 10) — Detects sudo escalation to an interactive root shell (`sudo su`, `sudo bash`). Uses `<if_sid>5402</if_sid>` to chain off the base sudo rule, then `<match>` checks if the command was `su` or `bash`. Mapped to MITRE **T1548.003** (Sudo and Sudo Caching) under the Privilege Escalation tactic.
 
