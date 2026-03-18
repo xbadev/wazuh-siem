@@ -122,11 +122,6 @@ Custom rules build on existing detections. A custom decoder is different — it 
 
 Created a simulated application log on the Ubuntu agent:
 
-```bash
-sudo mkdir -p /var/log/myapp
-sudo bash -c 'echo "2026-03-17T19:00:00 myapp: LOGIN_FAILED user=admin src=10.0.0.5 reason=invalid_password" >> /var/log/myapp/app.log'
-```
-
 ![Create log](screenshots/create-app-log-and-add-fake-log-line.png)
 
 Then added a `<localfile>` block to the agent's `ossec.conf` to tell Wazuh to collect this log:
