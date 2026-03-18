@@ -36,7 +36,7 @@ sudo systemctl restart wazuh-agent
 
 ![Agent restart](../screenshots/troubleshoot-restarting-wazuh-agent-in-ubuntu-machine.png)
 
-Ran `sudo su` again. The dashboard immediately showed both rule 5402 and custom rule 100010 firing in sequence:
+Ran `sudo su` again. The dashboard immediately showed the agent being stopped and starting again and both rule 5402 and custom rule 100010 firing in sequence:
 
 ![Rules fired](../screenshots/troubleshoot-dashboard-shows-agent-restarting-and-then-5402-and-100010-fired.png)
 
