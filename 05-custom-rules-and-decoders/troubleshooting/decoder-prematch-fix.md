@@ -32,6 +32,8 @@ Changed the parent decoder to use `<prematch>` instead of `<program_name>`. This
 
 After restarting the Wazuh manager, `wazuh-logtest` confirmed the decoder matched and all fields were extracted correctly — leading to rule 100021 firing as expected.
 
+![decoder match](../screenshots/logtest-myapp-log-line-matched-the-decoder-rule-100021.png)
+
 ## Lesson
 
 When writing custom decoders, `<program_name>` only works if the log follows standard syslog format that Wazuh's pre-decoder can parse. For non-standard log formats or logs with ISO timestamps, use `<prematch>` to match on content instead. This is more reliable and works regardless of the timestamp format.
