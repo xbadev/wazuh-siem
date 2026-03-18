@@ -4,7 +4,7 @@
 
 After writing a custom decoder for the `myapp` log source, `wazuh-logtest` showed "No decoder matched" in Phase 2. The log line was ingested but Wazuh couldn't parse it, so it fell through to the generic rule 1002 ("Unknown problem somewhere in the system"):
 
-![No decoder matched](screenshots/troubleshoot-logtest-myapp-log-line-didnt-match-decoder.png)
+![No decoder matched](../screenshots/troubleshoot-logtest-myapp-log-line-didnt-match-decoder.png)
 
 ## Root Cause
 
@@ -28,7 +28,7 @@ Changed the parent decoder to use `<prematch>` instead of `<program_name>`. This
 </decoder>
 ```
 
-![Prematch fix](screenshots/troubleshoot-changed-to-prematch-myapp-in-local-decoder.xml.png)
+![Prematch fix](../screenshots/troubleshoot-changed-to-prematch-myapp-in-local-decoder.xml.png)
 
 After restarting the Wazuh manager, `wazuh-logtest` confirmed the decoder matched and all fields were extracted correctly — leading to rule 100021 firing as expected.
 
